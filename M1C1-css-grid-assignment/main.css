@@ -1,0 +1,91 @@
+/*Some space between divs*/
+body > div {
+    margin-bottom: 50px;
+}
+
+    .gridOne {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gridTwo {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+
+        .gridTwo > .color1 {
+            background-color: red;
+        }
+
+        .gridTwo > .color2 {
+            background-color: blue;
+        }
+
+        .gridTwo > .color3 {
+            background-color: yellow;
+        }
+
+
+    .gridThree {
+        width: 500px;
+        height: 300px;
+        display: grid;
+        grid-template-rows: 1fr 3fr;
+    }
+
+        .gridThree > .mytext {
+            background-color: coral;
+        }
+
+        .gridThree > .myimage {
+            background-color: greenyellow;
+        }
+
+        .gridThree > .myimage img {
+            width: 500px;
+            height: 225px;
+            object-fit: cover;
+        }
+
+    .gridFour {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        width: 500px;
+        background-color: green;
+    }
+
+        #couple {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+    .gridFive {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        width: 500px;
+        background-color: lightblue;
+    }
+
+        #couple-images {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            justify-items: center;
+        }
+
+            #couple-images img {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+            }
+
+    .gridSix {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        width: 500px;
+        background-color: lightgrey;
+    }
+
+        .gridSix p {
+            font-family: 'Merienda';
+            font-weight: 800;
+        }
