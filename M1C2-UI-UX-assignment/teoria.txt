@@ -1,0 +1,32 @@
+Respuestas a la parte teórica:
+
+Cuatro valores que se pueden usar con la propiedad justify-content.
+
+    Center, space-between, space-around y flex-end.
+
+¿Cuál es un objetivo primordial?
+
+    Un objetivo primordial es el fin que queremos conseguir en un proyecto, como puede ser una página web, y va a ser el punto central en el que estén enfocados todos los elementos. 
+    De esta manera, nos enfocaremos en el público al que se dirige ese mismo objetivo y la acción o resultado que queremos conseguir. 
+    También nos ayudará a no desviarnos del camino cuando diseñemos los elementos del proyecto, que tendrán que estar alineados con el objetivo primordial.
+
+¿Qué son los wireframes de baja fidelidad?
+
+    Son esquemas simples de la estructura que queremos que tenga cada página de nuestro proyecto, sin detalles como la tipografía o los colores, que podrían distraernos. 
+    Manteniéndolo lo más simple posible, podremos centrarnos en la utilidad y ubicación de cada elemento para mejorar la experiencia del usuario.
+
+¿Qué es Git?
+
+    Git es un sistema de control de versiones de distribución libre y código abierto. 
+    Esto nos permite realizar cambios significativos en los proyectos, con la facilidad de que si algún cambio se aplica de forma incorrecta o afecta a otros elementos, podemos volver a la versión más reciente, que sería justo antes de aplicar ese cambio. 
+    Además, Git implica que está desarrollado por una comunidad de desarrolladores y su código se puede utilizar sin comprar una licencia.
+
+¿Qué es un sitemap?
+
+    Un sitemap es un diagrama de flujo con todas las páginas web de un mismo proyecto, donde se muestra como llegar a cada una de ellas y qué se puede hacer, dependiendo del tipo de usuario que seas. 
+    Así, se pueden mostrar las diferencias de acceso o uso dependiendo de si eres un administrador, un usuario sin registrar, un usuario registrado, suscrito, etc...
+
+Asigne un nombre a tres valores que se pueden utilizar con flex-direction, incluido el valor predeterminado que utiliza flexbox cuando se crea.
+
+    No estoy muy segura de si entiendo la pregunta. 
+    Cuando se crea el flexbox, el valor predeterminado de flex-direction es row, otros valores pueden ser column o column-reverse.
