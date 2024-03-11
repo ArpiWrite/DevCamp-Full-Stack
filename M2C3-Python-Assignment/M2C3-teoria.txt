@@ -20,21 +20,21 @@ Un ejemplo sería:
 
 ¿Qué es una interpolación de cadenas?
 
-	Es una manera de insertar variables dentro de una cadena cadena larga. Para ello hay que añadir f""" antes de la cadena y cerrarla con triple comillas dobles. De esta manera, tenemos una cadena dinámica a la que se pueden dar diferentes valores a la variables que contienen, sin tener que escribir repetidamente el mismo texto cambiando solo las partes que nos interesan.
-Un ejemplo podría ser un email que se quiera enviar a cuantos clientes queramos, utilizando diferentes datos sobre ellos, como sus nombres, edades o producto que han adquirido para enviar un email personalizado a cada uno sin tener que cambiar a mano esos datos.
+	Es una manera de insertar variables dentro de una cadena. Para ello hay que añadir f antes de las comillas dobles de la cadena. También se puede hacer en un Heredoc poniendo f antes de las triple comillas dobles. De esta manera, tenemos una cadena dinámica a la que se le pueden dar diferentes valores a las variables que contiene, sin tener que escribir repetidamente el mismo texto cambiando a mano las partes que nos interesan.
+Un ejemplo podría ser un email que se quiera enviar a cuantos clientes queramos, utilizando diferentes datos sobre ellos, como sus nombres, edades o producto que han adquirido para enviar un email personalizado a cada uno.
 
 	email_bienvenida = f"""
 	¡Hola {name}!
 	Hemos recibido tu pedido de {producto}.
-	Gracias por elegirnos.
+	Gracias por elegir a nuestra tienda.
 	Un saludo."""
 
 ¿Cuándo deberíamos usar comentarios en Python?
 
-	Deberíamos intentar usar cuantos menos comentarios podamos, ya que eso significaría que hemos hecho un buen trabajo nombrando unas variables suficientemente descriptivas como para no necesitar aclaraciones. Dicho esto, los comentarios pueden ser útiles en proyectos largos para dividir el código, y ver a primera vista y encontrar más fácilmente la parte que nos interese revisar o actualizar.
+	Deberíamos intentar usar cuantos menos comentarios podamos, ya que eso significaría que hemos hecho un buen trabajo nombrando variables suficientemente descriptivas como para no necesitar aclaraciones. Dicho esto, los comentarios pueden ser útiles en proyectos largos para dividir el código, y ver a primera vista y encontrar más fácilmente la parte que nos interese revisar o actualizar.
 
 ¿Cuáles son las diferencias entre aplicaciones monolíticas y de microservicios?
 
-	Las diferencias radican sobre todo en como pueden afectar los cambios futuros a los diferentes procesos de una aplicación.
-	Si creamos una aplicación sencilla, no habría inconveniente en que fuera monolítica, es decir, que se crearan todas sus partes con un mismo programa. De esta manera, los cambios de una parte pueden afectar a otras, pero al ser una aplicación sencilla se puede controlar, además los procesos irán más rápido que si fuera microservicios.
+	Las diferencias radican sobre todo en como pueden afectar los cambios futuros a las diferentes partes de una aplicación.
+	Si creamos una aplicación sencilla, no habría inconveniente en que fuera monolítica, es decir, que se crearan todas sus partes con un mismo programa. De esta manera, los cambios de una parte pueden afectar a otras, pero al ser una aplicación sencilla se puede controlar, además los procesos irán más rápido que si se usaran diferentes programas.
 	Por otra parte, la aplicación microservicios crea sus diferentes partes con diferentes programas y equipos. Este tipo es más conveniente para aplicaciones más extensas, donde se dificultaría controlar las consecuencias de pequeños cambios si fueran monolíticas, por ello cada parte es creada por equipos independientes y los cambios no afectan a las otras partes. 
