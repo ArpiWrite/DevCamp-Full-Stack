@@ -1,0 +1,40 @@
+Las preguntas teóricas son:
+
+¿Cuáles son los tipos de Datos en Python?
+
+	Cadenas, numéricos, booleanos, listas, secuencias, sets, "none", tuplas, diccionarios.
+
+¿Qué tipo de convención de nomenclatura deberíamos utilizar para las variables en Python?
+
+	La nomenclatura "Snake case" en la que se separan las palabras de una variable con guión bajo, y sin mayúsculas.
+Un ejemplo sería: esta_variable_demasiado_larga
+
+¿Qué es un Heredoc en Python?
+
+	Es una cadena larga, de más de una línea, a la que se le asigna una variable, y que para que mantenga su formato y no de error hay que añadirle triple comillas dobles al inicio y al final de la cadena.
+Un ejemplo sería:
+
+	texto_aleatorio = """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere mollis lectus, volutpat tincidunt tellus rhoncus nec. Donec interdum cursus odio non accumsan.
+	
+	Vivamus gravida porta purus vitae bibendum. Vestibulum malesuada orci sit amet tortor sagittis pretium. Etiam consectetur mi non sem eleifend luctus."""
+
+¿Qué es una interpolación de cadenas?
+
+	Es una manera de insertar variables dentro de una cadena cadena larga. Para ello hay que añadir f""" antes de la cadena y cerrarla con triple comillas dobles. De esta manera, tenemos una cadena dinámica a la que se pueden dar diferentes valores a la variables que contienen, sin tener que escribir repetidamente el mismo texto cambiando solo las partes que nos interesan.
+Un ejemplo podría ser un email que se quiera enviar a cuantos clientes queramos, utilizando diferentes datos sobre ellos, como sus nombres, edades o producto que han adquirido para enviar un email personalizado a cada uno sin tener que cambiar a mano esos datos.
+
+	email_bienvenida = f"""
+	¡Hola {name}!
+	Hemos recibido tu pedido de {producto}.
+	Gracias por elegirnos.
+	Un saludo."""
+
+¿Cuándo deberíamos usar comentarios en Python?
+
+	Deberíamos intentar usar cuantos menos comentarios podamos, ya que eso significaría que hemos hecho un buen trabajo nombrando unas variables suficientemente descriptivas como para no necesitar aclaraciones. Dicho esto, los comentarios pueden ser útiles en proyectos largos para dividir el código, y ver a primera vista y encontrar más fácilmente la parte que nos interese revisar o actualizar.
+
+¿Cuáles son las diferencias entre aplicaciones monolíticas y de microservicios?
+
+	Las diferencias radican sobre todo en como pueden afectar los cambios futuros a los diferentes procesos de una aplicación.
+	Si creamos una aplicación sencilla, no habría inconveniente en que fuera monolítica, es decir, que se crearan todas sus partes con un mismo programa. De esta manera, los cambios de una parte pueden afectar a otras, pero al ser una aplicación sencilla se puede controlar, además los procesos irán más rápido que si fuera microservicios.
+	Por otra parte, la aplicación microservicios crea sus diferentes partes con diferentes programas y equipos. Este tipo es más conveniente para aplicaciones más extensas, donde se dificultaría controlar las consecuencias de pequeños cambios si fueran monolíticas, por ello cada parte es creada por equipos independientes y los cambios no afectan a las otras partes. 
