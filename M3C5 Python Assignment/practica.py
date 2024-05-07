@@ -29,7 +29,7 @@ def coincide(dato, lista):
     else:
         print(f'Aquí no hay nada parecido a {nombre} en tu lista...')
 
-nombre = 'Paul'
+nombre = 'Enrique'
 
 lista_nombre = ['Jessica', 'Paul', 'George', 'Henry', 'Adán']
 
