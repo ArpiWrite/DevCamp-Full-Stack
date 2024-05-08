@@ -1,5 +1,4 @@
-## PREGUNTA 1
-**¿Qué es un condicional?**
+## ¿Qué es un condicional?
 
 Un condicional es una construcción, que tal como su nombre indica, establece condiciones para que se ejecuten nuestras órdenes o no. Por esto, deducimos que el condicional busca un valor True o False. 
 
@@ -109,9 +108,7 @@ El orden correcto sería el siguiente:
         print("Es usted mayor de edad.")
 
 
-## INICIO PREGUNTA 2
-
-**¿Cuáles son los diferentes tipos de bucles en Python? ¿Por qué son útiles?**
+## ¿Cuáles son los diferentes tipos de bucles en Python? ¿Por qué son útiles?
 
 Definamos de forma sencilla qué son los bucles: son una herramienta para alterar el flujo normal de un programa, más especificamente, nos permiten repetir una porción de código tantas veces como queramos.
 
@@ -158,9 +155,7 @@ Es habitual encontrarse también el siguiente tipo de estructura donde **range()
         print(i)
 
 
-## INICIO PREGUNTA 3
-
-**¿Qué es una lista por comprensión en Python?**
+## ¿Qué es una lista por comprensión en Python?
 
 La comprensión de listas, del inglés *list comprehensions*, es una funcionalidad que nos permite crear listas avanzadas en una misma línea de código. Esto quiere decir que las listas que habitualmente creamos en varias líneas de código, podemos crearlas en una sola.
 
@@ -208,9 +203,7 @@ Aunque pueda parecer muy útil utilizar las listas de comprensión, no debemos o
 Podemos usarlas con moderación para listas sencillas y es bueno reconocerlas por si las encontramos en otros trabajos.
 
 
-## INICIO PREGUNTA 4
-
-**¿Qué es un argumento en Python?**
+## ¿Qué es un argumento en Python?
 
 Un **argumento** es un valor que le damos a una función, pero para entender exactamente qué es, resulta necesario diferenciarlo de **parámetro**.
 
@@ -223,20 +216,156 @@ Pongamos un ejemplo para explicarlo.
 
 En una función hay varias partes: la primera, en la que **definimos** la función con la palabra reservada ***def***, le damos un nombre y entre paréntesis le damos valores, que en este punto se denominan **parámetros** (en este ejemplo *(a, b)*). 
 
-Después de crear la función e indicarle las instrucciones que queremos que siga, solo tenemos que llamar a la función usando el nombre que le hemos dado y entre paréntesis indicamos los valores que queremos que utilice para ejecutar la función, que en esta parte se denominan **argumentos** (en el ejemplo *(30, 10)*)
+Después de crear la función e indicarle las instrucciones que queremos que siga, solo tenemos que llamar a la función usando el nombre que le hemos dado y entre paréntesis indicamos los valores que queremos que utilice para ejecutar la función, que en esta parte se denominan **argumentos** (en el ejemplo *(30, 10)*).
 
-- Se pueden utilizar ***argumentos por posición***, como en este ejemplo, que en orden, 30 se posiciona como el parámetro *a* y 10 como el parámetro *b*.
-- O también se podrían usar ***argumentos por nombre***, donde los argumentos son precedidos por un identificador, y se puede alterar su posición. Se vería así:
+La flexibilidad y adaptabilidad que ofrecen las funciones Python en el manejo de argumentos es una característica única en el lenguaje, lo que lo convierte en una herramienta poderosa para el desarrollo de aplicaciones complejas.
+
+Existen diferentes tipos de argumentos que se pueden pasar a una función en Python:
+
+- ***Argumentos posicionales:*** son los argumentos que se envían a una función en el orden en que se definieron, es decir, el primer argumento será el primero que se envíe, el segundo será el segundo, y así sucesivamente.
 
         def resta(a, b):
             return a - b
 
-        resta(a=30, b=10)
+        resta(6, 4)
+
+    En este ejemplo, al llamar a la función con resta(6, 4), se está enviando a=6 y b=4, por lo que el resultado será 2.
+
+    Un ejemplo diferente en el que queremos imprimir información sobre una persona:
+
+        def informacion_persona(nombre, edad, ciudad):
+            print(f"{nombre} tiene {edad} años y vive en {ciudad}")
+
+        informacion_persona("Rita", 87, "Guarromán")
+
+    En este caso, se enviaron los valores nombre="Rita", edad=87 y ciudad="Guarromán", por lo que la función imprimirá *'Rita tiene 87 años y vive en Guarromán'*.
+
+    También es posible definir **valores por defecto** para los argumentos en caso de saber que no van a ser especificados en la llamada.
+
+        def info_persona(nombre, edad, ciudad="algún lugar de la Tierra"): 
+            print(f"{nombre} tiene {edad} años y vive en {ciudad}")
+
+        info_persona("Nefertari", 3325)
+
+    En este ejemplo, se **define un valor por defecto** de ciudad="algún lugar de la Tierra". Al llamar a la función con info_persona("Nefertari", 3325), se envían los valores de nombre="Nefertari" y edad=3325, pero no se envía ningún valor para ciudad, por lo que se utilizarán los valores por defecto definidos en la función. El resultado impreso por la función sería Nefertari tiene 3325 años y vive en algún lugar de la Tierra.
+
+- ***Argumentos por palabra clave:*** son aquellos que se definen mediante una **palabra clave** seguida de un signo **igual** y su **valor** correspondiente. 
+
+    Por ejemplo, en una función *info* que recibe los argumentos nombre y edad, podríamos utilizar la siguiente sintaxis para llamar a la función:
+
+        info(nombre="Betsy", edad=3)
+
+    De esta forma, Python sabe con exactitud qué valor le corresponde a cada argumento, muy útil en casos donde nuestra función recibe muchos argumentos o para hacer nuestro código más legible.
+
+    Otro ejemplo para mostrar la flexibilidad y adaptabilidad de Python:
+
+        def suma_numeros(num1, num2, mostrar_resultado=False):
+            resultado = num1 + num2
+            if mostrar_resultado:
+                print("El resultado de la suma es:", resultado)
+            return resultado
+
+        resultado = suma_numeros(3, 4)
+        # resultado es 7
+
+        resultado = suma_numeros(3, 4, mostrar_resultado=True)
+        # imprime "El resultado de la suma es: 7" y asigna 7 a resultado
+
+- ***Argumentos por defecto:*** son valores que se asignan a los parámetros de una función en caso de que no se proporcionen valores para ellos al llamar a la función.
+
+    Si no se proporciona algún valor para los argumentos a y b al llamar a la función, se producirá un **error**.
+
+        def concatenar(a, b):
+            return a + b
+
+    Para evitar esto, podemos proporcionar **valores por defecto** para a y b. Por ejemplo:
+
+        def concatenar(a="", b=""):
+            return a + b
+
+    Si no se proporciona un valor para a o b al llamar a la función, se utilizarán estos valores predeterminados.
+
+    Es importante tener en cuenta que los **valores por defecto** solo se evalúan **una vez**, al definir la función. Esto significa que si se usa un **objeto mutable** (por ejemplo, una lista o un diccionario) como valor por defecto, se pueden producir resultados inesperados. 
+    
+    En el siguiente ejemplo, se usará una lista como valor predeterminado para el parámetro lista:
+
+        def agregar_elemento(elemento, lista=[]):
+            lista.append(elemento)
+            return lista
+
+    Al llamar a esta función sin proporcionar una lista, se utilizará la lista predeterminada:
+
+        print(agregar_elemento(1))	#imprimirá [1]
+    
+    Si llamamos a la función de nuevo con un objeto diferente, veremos que ambas llamadas a la función están añadiendo el elemento a la misma lista:
+
+        print(agregar_elemento(2))	#imprimirá [1, 2]
+    
+    Para evitar este comportamiento inesperado, podemos utilizar un valor por defecto que no sea un **objeto mutable**. 
+    
+    Por ejemplo, podemos usar ***None*** y luego dentro de la función creamos la lista o cualquier objeto que deseemos usar.
+
+        def agregar_elemento(elemento, lista=None):
+            if lista is None:
+                lista = []
+            lista.append(elemento)
+            return lista
+
+- ***Argumentos variables (args y kwargs)***: cabe destacar que los nombres de estos parámetros son indiferentes; args y kwargs son utilizados simplemente por convención.
+
+    - Para que una función tome una cantidad indefinida de argumentos, se utiliza la expresión __*args__.
+
+            def f(*args):
+                return args
+
+            f(1, 5, True, False, "Hello, world!") 
+
+            Devuelve => (1, 5, True, False, 'Hello, world!')
+
+        En este caso, **args** es una tupla que contiene todos los valores. El signo asterisco (*) es el que cumple dicha funcionalidad; de lo contrario, únicamente el primer argumento sería almacenado en args.
+
+        Por eso, todo argumento posterior necesariamente debe ser un argumento clave-valor.
+
+            def f(*args, b):
+                return args, b
+
+            # b solo puede especificarse a través del nombre.
+            f(1, 2, b=3)
+
+            Devuelve =>((1, 2), 3)
+
+    - __**kwargs__ es un diccionario que contiene el nombre de cada uno de los argumentos junto con su valor. Siendo esto así, el orden de los mismos es indistinto.
+
+    Ambos métodos pueden ser implementados en una misma función como excepción al error de sintaxis.
+
+            def f(*args, **kwargs):
+                return args, kwargs
+
+            args, kwargs = f(True, False, 3.5, message="Hello, world!", year=2014)
+            
+            print(args) => (True, False, 3.5)
+            print(kwargs) => {message="Hello, world!", year=2014}
+
+    Los signos * y ** pueden también ser utilizados para almacenar argumentos en un objeto, para ser pasados luego a una función.
+
+    Ejemplo de **args:**
+
+        def f(a, b, c):
+            return a*b**c
+
+        argumentos = (5, 10, 2)
+        f(*argumentos) => 500
+
+    De la misma forma funcionan los **kwargs**.
+        
+        def f(message="Hello", name=None):
+            print("{0}, {1}!".format(message, name))
+
+        kwargs = {"message": "Hola", "name": "mundo"}
+        f(**kwargs)
 
 
-## INICIO PREGUNTA 5
-
-**¿Qué es una función Lambda en Python?**
+## ¿Qué es una función Lambda en Python?
 
 Las funciones lambda en Python son una forma corta de declarar funciones pequeñas, se comportan como funciones normales declaradas con la palabra clave **def** y podemos empaquetarlas (como si las metiéramos en una variable) para introducirlas en otras funciones.
 
@@ -262,16 +391,27 @@ Función **saludo**:
 En este caso estamos usando la función **lambda** como argumento de la función **saludo**.
 
 
-## INICIO PREGUNTA 6
-
-**¿Qué es un paquete pip?**
+## ¿Qué es un paquete pip?
 
 **Pip** (*pip installs package*) es una herramienta para instalar y gestionar ***librerías externas*** en Python. **PyPI** (*Índice de paquetes de Python* o *Python Package Index*), conocido como **CheeseShop** es un repositorio donde encontrar e instalar programas desarrollados y compartidos por la comunidad de Python.
 
-La ***sintaxis*** de Pip para instalar un paquete, por ejemplo **NumPy** (paquete que permite procesar de manera muy eficiente grander colecciones de datos de números, registros y objetos), es muy simple:
+La ***sintaxis*** de Pip para instalar un paquete, por ejemplo **NumPy** (paquete que permite procesar de manera muy eficiente grandes colecciones de datos de números, registros y objetos), es muy simple:
 
     pip install numpy
 
-Pip también nos permite ***actualizar y administrar las versiones*** de los paquetes. Un problema que puede surgir de la actualización de las versiones, es que podríamos afectar a otros proyectos que necesitaban versiones anteriores para poder seguir ejecutándose. 
+He aquí un resumen de los ***usos principales*** de la herramienta pip:
 
-Por eso, una de las principales ventajas de trabajar con pip es que nos permite crear ***ambientes virtuales*** (*entornos de desarrollo independientes*) para cada proyecto, lo que se traduce en poder instalar las versiones que necesitamos sin afectar al resto de aplicaciones.
+- ***Creación y distribución de paquetes propios***: Además de ser una herramienta para la instalación y administración de paquetes, pip también permite a los desarrolladores **crear y distribuir** sus propios paquetes. Esto permite a la comunidad de Python compartir sus proyectos y código con otros.
+- ***Instalación de paquetes en un entorno virtual***: pip se puede usar junto con herramientas de entorno virtual, como **virtualenv** o **venv**, para instalar paquetes en un entorno aislado, lo que es útil para evitar conflictos de versiones entre paquetes o para mantener separados los paquetes de diferentes proyectos.
+- ***Especificación de versiones de paquetes***: Al instalar o actualizar paquetes, puedes especificar una versión particular del paquete que deseas instalar utilizando el operador ==. Por ejemplo: 
+        
+        pip install nombre_del_paquete==1.0.0.
+
+- ***Instalación de paquetes desde un archivo de requerimientos***: Puedes crear un archivo de requerimientos (usualmente llamado **requirements.txt**) que liste todos los paquetes y sus versiones que tu proyecto necesita. Luego, puedes usar pip para instalar todos esos paquetes de una sola vez: 
+
+        pip install -r requirements.txt.
+
+- ***Mostrar información sobre un paquete***: Puedes usar el comando **pip show** para mostrar información detallada sobre un paquete instalado, como su versión, ubicación, dependencias y más.
+- ***Buscar paquetes***: pip tiene un comando de búsqueda que permite buscar paquetes en el **Índice de Paquetes de Python (PyPI)** directamente desde la línea de comandos: 
+
+        pip search nombre_del_paquete.
