@@ -26,19 +26,19 @@ Las clases se crean utilizando la palabra reservada ***class***, seguido por el 
 
     - **Atributos privados**: solo se puede **acceder a ellos desde dentro de la clase en la que se definen**. En Python, los atributos privados se definen mediante el prefijo **«__» (dos guiones bajos)** seguido del nombre del atributo. Por ejemplo, si queremos definir un atributo privado llamado *saldo* en una clase llamada *CuentaBancaria*, podemos hacerlo de la siguiente manera:
 
-        ![Atributo privado](images/atributo-privado-clases.jpg "Ejemplo del atributo privado SALDO")
+        ![Atributo privado](images/atributo-privado-clases.JPG "Ejemplo del atributo privado SALDO")
 
     - **Atributos protegidos**: solo se puede **acceder a ellos desde dentro de la clase en la que se definen y desde las clases heredadas (clases hijas) de esa clase**. En Python, los atributos protegidos se definen mediante el prefijo **«_» (un guion bajo)** seguido del nombre del atributo. 
 
 En el siguiente ejemplo, hemos creado la clase ***Perro*** con tres **atributos**: *nombre, raza y edad*. También hemos creado el **método saludar**, que simplemente imprime una cadena de texto que incluye el nombre y edad del perro.
 
-![Clase Perro](images/basic-sintax-clases.jpg "Ejemplo de clase básica")
+![Clase Perro](images/basic-sintax-clases.JPG "Ejemplo de clase básica")
 
 Vemos en nuestro ejemplo que la primera función es **\_\_init__**, de la cual voy a hablar en la siguiente pregunta, por lo que aquí solo voy a mencionar que es un método especial (también llamado **método dunder**) en Python que se utiliza para **inicializar una instancia de una clase**. 
 
 Una vez creada la clase, podemos ***instanciar objetos*** de la misma (crear un objeto con esa clase). Para hacerlo, simplemente llamamos al nombre de la clase seguido de paréntesis:
 
-![Instancia de clase Perro](images/ejemplo-instancia-clases.jpg "Instancia de objeto mi_perro")
+![Instancia de clase Perro](images/ejemplo-instancia-clases.JPG "Instancia de objeto mi_perro")
 
 
 En este ejemplo, hemos creado un objeto de la clase *Perro* llamado **mi_perro**, con el nombre *Firulais*, raza *Chihuahua* y edad *5*. Luego llamamos al **método saludar** sobre este objeto, lo que imprimirá en la consola la cadena de texto definida en el método:
@@ -239,7 +239,7 @@ A continuación, se muestra una lista de algunos de los métodos dunder más com
 
     Por ejemplo, supongamos que tenemos una clase **Persona** con los atributos **nombre y edad**. Podemos definir el método **\_\_str__** de la siguiente manera:
 
-    ![Método __str__](images/str-dunder-clases.jpg "Definimos el método __str__")
+    ![Método __str__](images/str-dunder-clases.JPG "Definimos el método __str__")
 
     En este ejemplo, el método **\_\_str__** devuelve una cadena de caracteres que representa la instancia de la clase **Persona**. La cadena contiene el nombre y la edad de la persona, separados por un espacio.
 
@@ -259,7 +259,7 @@ A continuación, se muestra una lista de algunos de los métodos dunder más com
 
     Aquí hay un ejemplo de cómo se puede implementar el método **\_\_repr__** en una clase de Python:
 
-    ![Método __repr__](images/repr-dunder-clases.jpg "Definimos el método __repr__")
+    ![Método __repr__](images/repr-dunder-clases.JPG "Definimos el método __repr__")
 
         PERSONA2 = PERSONA("NANI", 66)
 
@@ -275,7 +275,7 @@ Los **decoradores** son **funciones que modifican el comportamiento de otras fun
 
 Veamos un ejemplo muy sencillo. Tenemos una función **suma()** que vamos a decorar usando **mi_decorador()**. Para ello, antes de la declaración de la función suma, hacemos uso de ***@mi_decorador***.
 
-![Decoradores](images/decorador1.jpg "@mi_decorador")
+![Decoradores](images/decorador1.JPG "@mi_decorador")
 
 Lo que realiza **mi_decorador()** es definir una nueva función que encapsula o **envuelve la función que se pasa como entrada**. Concretamente, hace uso de **dos print()**, uno antes y otro después de la llamada la función.
 
@@ -286,9 +286,9 @@ Por lo tanto, cualquier función que use **@mi_decorador** tendrá dos print, un
 - **di_hola()** llama a la función.
 - **di_hola** hace referencia a la función, no la llama.
 
-![Funciones en variables](images/asignando-funcion-a-variable.jpg "Asignando funciones a variables")
+![Funciones en variables](images/asignando-funcion-a-variable.JPG "Asignando funciones a variables")
 
 Entendido esto, demos un paso más. En Python se pueden **definir funciones dentro de otras funciones**. La función **operaciones** define *suma()* y *resta()*, y dependiendo del parámetro de entrada ***op***, se devolverá una u otra. Si llamamos a la función devuelta con dos operandos, se realizará una operación distinta en función de si se uso suma o resta.
 
-![Funciones en variables](images/funciones-en-funciones.jpg "Asignando funciones a variables")
+![Funciones en variables](images/funciones-en-funciones.JPG "Asignando funciones a variables")
 
