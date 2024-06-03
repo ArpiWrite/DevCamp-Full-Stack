@@ -149,6 +149,8 @@ Permite guardar todas las request que queramos, para tenerlas preparadas y poder
 
 Además, Postman es muy intuitiva de usar y permite trabajar cómodamente con todos los métodos del HTTP, como GET, POST, PUT, PATCH, DELETE.
 
+![Postman](images/postman.JPG "Vista general de aplicación Postman")
+
 ## ¿Qué es el polimorfismo?
 
 Python permite la implementación de polimorfismo a través del uso de **herencia y sobreescritura de métodos**. El polimorfismo permite que un objeto se comporte de manera diferente en **distintos contextos**.
